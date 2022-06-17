@@ -3,6 +3,10 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\SurveyController;
+use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\AnswerController;
+use App\Http\Controllers\ResponseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +21,17 @@ use App\Http\Controllers\AuthController;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+
+Route::prefix('v1')->group(function () {
+    Route::prefix('survey')->group(function () {
+        Route::get('/', [SurveyController::class, 'index']);
+    });
+
+    Route::prefix('question')->group(function () {
+        Route::post('/create', [QuestionController::class, 'create']);
+    });
 });
 
 // auth
