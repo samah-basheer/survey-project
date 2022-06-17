@@ -1,0 +1,32 @@
+.mainbody {
+    margin-left: 160px;
+    margin-right: 180px;
+    background-color: white;
+}
+.main_top {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main_docs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+@media screen and (max-width: 740px) {
+    .mainbody {
+        width: 100%;
+        margin: 10px auto;
+    }
+    .main_docs {
+        display: grid;
+        margin-top: 20px;
+        grid-template-columns: 1fr 1fr;
+        margin: 20px auto;
+        margin-left: 10px;
+        flex-wrap: wrap;
+    }
+}
