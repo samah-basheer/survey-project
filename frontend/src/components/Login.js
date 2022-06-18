@@ -3,9 +3,14 @@ import './Login.css';
 
 const Login = () => {
     const [isActive, setActive] = useState(false);
+    const [eyeIcon, setEyeIcon] = useState(false);
 
     const toggleClass = () => {
         setActive(!isActive);
+    }
+
+    const toggleEye = () => {
+        setEyeIcon(!eyeIcon);
     }
 
     return (
@@ -22,7 +27,7 @@ const Login = () => {
                             </div>
                             <div className="input-field">
                                 <input
-                                    type="password"
+                                    type={eyeIcon ? 'text' : 'password'}
                                     className="password"
                                     id="password"
                                     name="password"
@@ -30,7 +35,7 @@ const Login = () => {
                                     required
                                 />
                                 <i className="uil uil-lock icon"></i>
-                                <i className="uil uil-eye-slash showHidePw"></i>
+                                <i className={eyeIcon ? 'uil uil-eye showHidePw' : 'uil uil-eye-slash showHidePw'} onClick={toggleEye}></i>
                             </div>
                             <div className="response">
                                 <p className="login-response" id="status"></p>
