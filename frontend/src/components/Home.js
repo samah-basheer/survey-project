@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import './Home.css';
-import Surveycard from "./Surveycard";
 import Homeheader from "./Homeheader";
+import Surveyloop from "./Surveyloop";
 
 const Home = () => {
     return (
@@ -9,7 +9,7 @@ const Home = () => {
             <Homeheader/>
             <div className="main-content">
                 <div className="survey-cards">
-                    <Surveycard/>
+                    <Surveyloop/>
                 </div>
             </div>
         </div>
