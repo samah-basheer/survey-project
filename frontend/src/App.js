@@ -4,6 +4,8 @@ import Template from './components/Template.js'
 import Mainbody from './components/Mainbody.js'
 import Formheader from './components/Formheader.js'
 import Question_form from './components/Question_form.js'
+import Home from './components/Home.js'
+import Login from './components/Login.js'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 const App = () => {
@@ -11,6 +13,9 @@ const App = () => {
       <div className="app">
           <Router>
               <Switch>
+                  <Route path="/login">
+                      <Login/>
+                  </Route>
                   <Route path="/admin/form/:id">
                       <Formheader/>
                       <Question_form/>
@@ -18,6 +23,9 @@ const App = () => {
                   <Route path="/admin">
                       <Template/>
                       <Mainbody/>
+                  </Route>
+                  <Route path="/">
+                      <Home/>
                   </Route>
               </Switch>
           </Router>
