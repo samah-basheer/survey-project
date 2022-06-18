@@ -8,6 +8,7 @@ import Home from './components/Home.js'
 import Login from './components/Login.js'
 import Homeheader from "./components/Homeheader";
 import Success from "./components/Success";
+import Singlesurvey from "./components/Singlesurvey";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 const App = () => {
@@ -29,6 +30,10 @@ const App = () => {
                   <Route path="/success">
                       <Homeheader/>
                       <Success/>
+                  </Route>
+                  <Route path="/survey/:id">
+                      <Homeheader/>
+                      <Singlesurvey/>
                   </Route>
                   <Route path="/">
                       <Home/>
