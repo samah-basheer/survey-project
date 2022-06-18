@@ -1,0 +1,9 @@
+.main-content {
+    background-color: #F8F8F8;
+    min-height: 100vh;
+    padding: 50px 12px;
+}
+.survey-cards {
+    max-width: 1200px;
+    margin: 0 auto;
+}
