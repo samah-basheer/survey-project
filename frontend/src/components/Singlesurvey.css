@@ -22,3 +22,6 @@ input[type=text] {
     width: 100%;
     border: none;
 }
+.radio-option {
+    margin: 12px 0;
+}
