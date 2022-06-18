@@ -8,7 +8,7 @@ import Home from './components/Home.js'
 import Login from './components/Login.js'
 import Homeheader from "./components/Homeheader";
 import Success from "./components/Success";
-import Singlesurvey from "./components/Singlesurvey";
+import Singlesurveyloop from "./components/Singlesurveyloop";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 const App = () => {
@@ -33,7 +33,7 @@ const App = () => {
                   </Route>
                   <Route path="/survey/:id">
                       <Homeheader/>
-                      <Singlesurvey/>
+                      <Singlesurveyloop/>
                   </Route>
                   <Route path="/">
                       <Home/>
