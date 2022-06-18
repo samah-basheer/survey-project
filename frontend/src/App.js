@@ -6,6 +6,8 @@ import Formheader from './components/Formheader.js'
 import Question_form from './components/Question_form.js'
 import Home from './components/Home.js'
 import Login from './components/Login.js'
+import Homeheader from "./components/Homeheader";
+import Success from "./components/Success";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 const App = () => {
@@ -23,6 +25,10 @@ const App = () => {
                   <Route path="/admin">
                       <Template/>
                       <Mainbody/>
+                  </Route>
+                  <Route path="/success">
+                      <Homeheader/>
+                      <Success/>
                   </Route>
                   <Route path="/">
                       <Home/>
