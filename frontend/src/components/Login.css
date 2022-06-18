@@ -21,8 +21,7 @@
 .main {
     background: #bde0fe;
     min-height: 100vh;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 100px 5%;
 }
 .container {
     position: relative;
