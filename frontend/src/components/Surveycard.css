@@ -20,6 +20,7 @@
     color: #ffffff;
     border-radius: 39px;
     padding: 9px 30px;
+    cursor: pointer;
 }
 .survey-footer {
     display: flex;
