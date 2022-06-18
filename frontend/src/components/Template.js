@@ -8,7 +8,7 @@ function Template() {
     const history = useHistory();
     const createForm = () => {
         const id = uuid();
-        history.push("/form/"+id);
+        history.push("/admin/form/"+id);
     }
     return (
         <div className="template_section">

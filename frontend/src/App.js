@@ -11,11 +11,11 @@ const App = () => {
       <div className="app">
           <Router>
               <Switch>
-                  <Route path="/form/:id">
+                  <Route path="/admin/form/:id">
                       <Formheader/>
                       <Question_form/>
                   </Route>
-                  <Route path="/">
+                  <Route path="/admin">
                       <Template/>
                       <Mainbody/>
                   </Route>
