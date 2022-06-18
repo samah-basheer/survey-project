@@ -1,0 +1,41 @@
+.single-survey-card {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 12px 18px;
+    margin: 18px;
+}
+.single-survey-card .survey-title {
+    font-size: 24px;
+    font-weight: 400;
+}
+.single-survey-card .description {
+    font-size: 15px;
+    font-weight: 300;
+}
+.survey-btn > div {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #1363DF;
+    color: #ffffff;
+    border-radius: 39px;
+    padding: 9px 30px;
+}
+.survey-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.spacer {
+    height: 50px;
+}
+.survey-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+@media only screen and (max-width: 768px) {
+    .survey-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
