@@ -13,16 +13,23 @@ const Singlesurvey = ({survey}) => {
                         case 'text':
                             return <div className="input-text"><input type='text' placeholder="Write your answer here"/></div>
                         case 'radio':
-                            const arr = survey.questionOption;
                             return <div>
                                 {
-                                    Object.keys(arr).map((item) => (
-                                        <div className="radio-option"><input type="radio" value={arr[item]} name="test"/> { arr[item] }</div>
+                                    Object.keys(survey.questionOption).map((item) => (
+                                        <div className="radio-option"><input type="radio" value={survey.questionOption[item]} name="test"/> { survey.questionOption[item] }</div>
                                     ))
                                 }
                             </div>
                         case 'select':
-                            return <div>select</div>
+                            return <div>
+                                <select>
+                                {
+                                    Object.keys(survey.questionOption).map((item) => (
+                                        <option value={survey.questionOption[item]}>{survey.questionOption[item]}</option>
+                                    ))
+                                }
+                                </select>
+                            </div>
                         default:
                             return null
                     }
