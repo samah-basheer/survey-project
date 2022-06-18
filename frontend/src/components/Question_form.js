@@ -2,6 +2,34 @@ import React, { useState, useEffect } from "react";
 import "./Question_form.css";
 
 function Question_form() {
+    const [questions, setQuestions] = useState([]);
+
+    useEffect(() => {
+        var newQuestion = {
+            questionText: "Question",
+            answer: false,
+            answerKey: "",
+            questionType: "radio",
+            options: [{ optionText: "Option 1" }],
+            open: true,
+            required: false,
+        };
+
+        setQuestions([...questions, newQuestion]);
+    }, []);
+
+    function questionsUI() {
+        return (
+            <div className="questions">
+                {questions.map((ques, i) => (
+                    <div className="title">
+                        <input type="text" placeholder={ques.questionText}/>
+                    </div>
+                ))}
+            </div>
+        );
+    }
+
     return (
         <div>
             <div className="question_form">
@@ -13,6 +41,7 @@ function Question_form() {
                             <input type="text" className="question_form_top_desc" style={{color: "black"}} placeholder="Form Description"/>
                         </div>
                     </div>
+                    {questionsUI()}
                 </div>
             </div>
         </div>
