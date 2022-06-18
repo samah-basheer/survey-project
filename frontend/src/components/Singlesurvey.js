@@ -8,7 +8,18 @@ const Singlesurvey = ({survey}) => {
                 {survey.questionText}
             </div>
             <div className="content">
-                <input type={survey.questionType}/>
+                {(() => {
+                    switch (survey.questionType) {
+                        case 'text':
+                            return <div className="input-text"><input type='text' placeholder="Write your answer here"/></div>
+                        case 'radio':
+                            return <div>radio</div>
+                        case 'select':
+                            return <div>select</div>
+                        default:
+                            return null
+                    }
+                })()}
             </div>
         </div>
     )

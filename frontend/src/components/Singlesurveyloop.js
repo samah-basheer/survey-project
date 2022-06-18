@@ -19,11 +19,12 @@ const Surveyloop = () => {
         },
         {
             questionText: "Write one word that best describes you",
-            questionType: "text",
-        },
-        {
-            questionText: "Write one word that best describes you",
-            questionType: "text",
+            questionType: "select",
+            questionOption: {
+                option1: "Saida",
+                option2: "Beirut",
+                option3: "Tripoli",
+            }
         },
     ];
 
