@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import axios from "axios";
 import './Login.css';
 
 const Login = () => {
@@ -12,7 +13,32 @@ const Login = () => {
     const toggleEye = () => {
         setEyeIcon(!eyeIcon);
     }
+    function login(e) {
+        e.preventDefault();
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
 
+        let data = new FormData();
+        data.append('email', email);
+        data.append('password', password);
+
+        let url = 'http://127.0.0.1:8000/api/auth/login';
+
+        axios({
+            method: 'POST',
+            url: url,
+            data: data
+        })
+            .then(function (response) {
+                let status = document.getElementById('status');
+                if(response.data.status == "Success") {
+                    localStorage.setItem('user_id', response.data['user_id']);
+                    window.location.href = "/";
+                } else {
+                    status.innerHTML = 'Incorrect e-mail and/or password.';
+                }
+            });
+    }
     return (
         <div className="main">
             <div className={isActive ? 'active container': 'container'}>
@@ -41,7 +67,7 @@ const Login = () => {
                                 <p className="login-response" id="status"></p>
                             </div>
                             <div className="input-field button">
-                                <input type="button" id="login-btn" value="Login Now"/>
+                                <input type="button" id="login-btn" value="Login Now" onClick={login}/>
                             </div>
                         </form>
 
