@@ -73,6 +73,9 @@ function Question_form() {
                         <img src={plus} onClick={addNew}/>
                     </div>
                     {questionsUI()}
+                    <div className="create-survey">
+                        <div>Create Survey</div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -65,3 +65,17 @@
     width: 30px;
     cursor: pointer;
 }
+.create-survey {
+    text-align: center;
+    margin-top: 20px;
+}
+.create-survey > div {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #1363DF;
+    color: #ffffff;
+    border-radius: 39px;
+    padding: 9px 30px;
+    cursor: pointer;
+}
+
