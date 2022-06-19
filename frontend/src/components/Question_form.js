@@ -18,20 +18,6 @@ function Question_form() {
             open: true,
             required: false,
         };
-        var newQuestion = {
-            questionText: "Question",
-            answer: false,
-            answerKey: "",
-            questionType: "radio",
-            options: [
-                { optionText: "Option 1" },
-                { optionText: "Option 2" },
-                { optionText: "Option 3" }
-            ],
-            open: true,
-            required: false,
-        };
-
         setQuestions([...questions, newQuestion]);
     }, []);
 
@@ -39,8 +25,11 @@ function Question_form() {
         const handleChange = event => {
             if(event.target.value == "text") {
                 document.getElementById('options').innerHTML = '<div class="input-text"><input type="text" placeholder="Type your answer here"/></div>';
+            } else if(event.target.value == "radio") {
+                document.getElementById('options').innerHTML = '<div class="input-text"><input type="text" placeholder="Add your options here seperated by comma ex: option 1, option 2"/></div>';
+            } else if(event.target.value == "select") {
+                document.getElementById('options').innerHTML = '<div class="input-text"><input type="text" placeholder="Add your options here seperated by comma ex: option 1, option 2"/></div>';
             }
-            console.log(event.target.value);
         };
         return (
             <>
