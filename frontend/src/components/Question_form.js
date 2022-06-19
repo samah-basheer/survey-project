@@ -18,19 +18,53 @@ function Question_form() {
             open: true,
             required: false,
         };
+        var newQuestion = {
+            questionText: "Question",
+            answer: false,
+            answerKey: "",
+            questionType: "radio",
+            options: [
+                { optionText: "Option 1" },
+                { optionText: "Option 2" },
+                { optionText: "Option 3" }
+            ],
+            open: true,
+            required: false,
+        };
 
         setQuestions([...questions, newQuestion]);
     }, []);
 
     function questionsUI() {
+        const handleChange = event => {
+            if(event.target.value == "text") {
+                document.getElementById('options').innerHTML = '<div class="input-text"><input type="text" placeholder="Type your answer here"/></div>';
+            }
+            console.log(event.target.value);
+        };
         return (
-            <div className="questions">
+            <>
                 {questions.map((ques, i) => (
-                    <div className="title">
-                        <input type="text" placeholder={ques.questionText}/>
+                    <div className="questions">
+                        <div className="title">
+                            <label>Add question</label>
+                            <input type="text" placeholder={ques.questionText}/>
+                        </div>
+                        <div>
+                            <label>Choose question type</label>
+                            <select onChange={handleChange}>
+                                <option value=""></option>
+                                <option value="text">Text</option>
+                                <option value="radio">Radio</option>
+                                <option value="select">Select</option>
+                            </select>
+                        </div>
+                        <div id="options">
+                            <label>Options</label>
+                        </div>
                     </div>
                 ))}
-            </div>
+            </>
         );
     }
 
