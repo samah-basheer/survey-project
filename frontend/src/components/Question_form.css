@@ -1,7 +1,8 @@
 .question_form {
-    background-color: #f4f4f9;
+    background-color: #F8F8F8;
     height: 100%;
     padding-bottom: 30px;
+    min-height: 100vh;
 }
 .section {
     margin: auto;
@@ -9,7 +10,7 @@
 }
 .question_form_top {
     background-color: white;
-    border-top: 8px solid rgb(103, 58, 183);
+    border-top: 8px solid #1363DF;
     border-radius: 8px;
     padding: 30px 25px;
     text-transform: capitalize;
@@ -24,7 +25,7 @@
     width: 100%;
     border: none;
     outline: none;
-    border-bottom: 1px solid #f4f4f9;
+    border-bottom: 1px solid #F8F8F8;
     color: black;
     height: 35px;
 }
@@ -41,4 +42,7 @@
     border-bottom: 1px solid #f4f4f9;
     color: black;
     height: 20px;
+}
+.question_title_section {
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
 }

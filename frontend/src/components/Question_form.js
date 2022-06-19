@@ -10,7 +10,11 @@ function Question_form() {
             answer: false,
             answerKey: "",
             questionType: "radio",
-            options: [{ optionText: "Option 1" }],
+            options: [
+                { optionText: "Option 1" },
+                { optionText: "Option 2" },
+                { optionText: "Option 3" }
+            ],
             open: true,
             required: false,
         };
