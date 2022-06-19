@@ -57,3 +57,11 @@
 .questions div {
     margin-top: 15px;
 }
+.add-question {
+    text-align: end;
+    padding-top: 20px;
+}
+.add-question img {
+    width: 30px;
+    cursor: pointer;
+}

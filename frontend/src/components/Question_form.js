@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Question_form.css";
+import plus from './images/plus.png';
 
 function Question_form() {
     const [questions, setQuestions] = useState([]);
@@ -68,7 +69,9 @@ function Question_form() {
                             <input type="text" className="question_form_top_desc" style={{color: "black"}} placeholder="Form Description"/>
                         </div>
                     </div>
-                    <button id="btnAddQuestion" onClick={addNew}>Add new Question</button>
+                    <div className="add-question">
+                        <img src={plus} onClick={addNew}/>
+                    </div>
                     {questionsUI()}
                 </div>
             </div>
