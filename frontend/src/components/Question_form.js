@@ -4,7 +4,7 @@ import "./Question_form.css";
 function Question_form() {
     const [questions, setQuestions] = useState([]);
 
-    useEffect(() => {
+    function addNew() {
         var newQuestion = {
             questionText: "Question",
             answer: false,
@@ -19,7 +19,7 @@ function Question_form() {
             required: false,
         };
         setQuestions([...questions, newQuestion]);
-    }, []);
+    }
 
     function questionsUI() {
         const handleChange = event => {
@@ -68,6 +68,7 @@ function Question_form() {
                             <input type="text" className="question_form_top_desc" style={{color: "black"}} placeholder="Form Description"/>
                         </div>
                     </div>
+                    <button id="btnAddQuestion" onClick={addNew}>Add new Question</button>
                     {questionsUI()}
                 </div>
             </div>
